@@ -17,7 +17,12 @@ export default function Nav({ onClick }: NavProps) {
             {nav.map((el) => {
                 const { label, location } = el;
                 return (
-                    <Link href={location} key={label} onClick={onClick}>
+                    <Link
+                        href={location}
+                        key={label}
+                        onClick={onClick}
+                        className="transition duration-200 ease-in-out transform hover:text-blue-300 hover:fill-blue-300"
+                    >
                         {label}
                     </Link>
                 );

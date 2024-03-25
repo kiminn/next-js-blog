@@ -10,13 +10,13 @@ export default function Header() {
                 <title>Kimi.Log</title>
             </Head>
             <section className="my-10">
-                <Link href="/" className="flex font-medium text-2xl sm:text-4xl pl-2 cursor-pointer">
+                <Link href="/" className="flex font-medium text-2xl sm:text-4xl cursor-pointer">
                     <Cat size={40} className="items-center pt-1" />
                     Kimi.Log
                 </Link>
             </section>
-            <header className="sticky top-0 left-0 w-full z-10 h-20 font-mono transition duration-500 bg-white ">
-                <div className="justify-end gap-5 text-center hidden sm:flex pt-7">
+            <header className="sticky top-0 left-0 w-full z-10 h-20 font-mono transition duration-500 ">
+                <div className="justify-end gap-5 text-center hidden sm:flex pt-7  ">
                     <Nav />
                 </div>
             </header>

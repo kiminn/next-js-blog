@@ -92,3 +92,25 @@ content layer
 https://miryang.dev/blog/build-blog-with-nextjs
 
 mdx마크다운이 원하는대로 적용이 안됨
+
+```tsx
+//tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        './pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        './app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+        extend: {
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            },
+        },
+    },
+    plugins: [require('@tailwindcss/typography')],
+};
+
+```

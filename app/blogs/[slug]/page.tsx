@@ -31,8 +31,7 @@ export default function Page({ params }: any) {
 
     return (
         <>
-            <h3>안녕하세요</h3>
-            <article className="prose prose-sm md:prose-base lg:prose-lg prose-slate !prose-invert mx-auto">
+            <article className="mt-10 pb-10 border-b-2 mb-10 prose">
                 <h1>{props.fontMatter.title}</h1>
                 <MDXRemote source={props.content}></MDXRemote>
             </article>

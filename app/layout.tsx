@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="max-w-screen-md min-w-[320px] mx-auto">
+            <body className="max-w-screen-md min-w-[320px] mx-auto text-neutral-900">
                 <Header />
                 {children}
             </body>

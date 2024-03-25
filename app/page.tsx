@@ -2,14 +2,16 @@ import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Link from 'next/link';
 import Head from 'next/head';
+import BlogPost, { Blog } from 'components/BlogPost';
 
 export default function Home() {
     const blogDir = 'blogs';
 
+    // 파일 시스템에서 blogs 디렉토리에 있는 파일들을 읽어와서 배열을 생성
     const files = fs.readdirSync(path.join(blogDir));
 
+    // 생성된 파일들로부터 meta 데이터와 slug를 추출하여 배열 생성
     const blogs = files.map((filename) => {
         const fileContent = fs.readFileSync(path.join(blogDir, filename), 'utf-8');
 
@@ -17,7 +19,7 @@ export default function Home() {
         return {
             meta: frontMatter,
             slug: filename.replace('.mdx', ''),
-        };
+        } as Blog;
     });
     return (
         <>
@@ -28,19 +30,18 @@ export default function Home() {
                 <meta property="og:url" content="" />
                 <meta property="og:image" content="" />
             </Head>
-            <section className="flex  gap-8 items-center flex-wrap">
+            <section className="flex gap-8 items-center flex-wrap">
                 <Image src="/prof.jpeg" alt="profile" width={300} height={300} className="rounded-full justify-start" />
                 <div className="min-w-[250] max-w-[300px]">
                     <h2 className="font-bold text-xl">Developing Together!</h2>
                     <br />
                     <p>함께 협업하는 개발자 입니다</p>
-                    <p>^^</p>
+                    <p>🩵🩵</p>
                     <div className="flex gap-5 items-center mt-4">
                         <a
                             href="mailto:808010x@gmail.com"
                             className="flex gap-2 items-center transition duration-200 ease-in-out transform hover:text-blue-300 hover:fill-blue-300"
                         >
-
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z" />
                             </svg>
@@ -65,23 +66,7 @@ export default function Home() {
                 <h1 className="font-bold text-2xl sm:text-4xl font-mono">Blog</h1>
             </section>
             <div className="py-2">
-                {blogs.map((blog) => (
-                    <Link href={'/blogs/' + blog.slug} passHref key={blog.slug}>
-                        <div className="py-2 flex justify-between align-middle gap-2">
-                            <div>
-                                <h3 className="text-lg font-bold transition duration-200 ease-in-out transform hover:text-blue-300 hover:fill-blue-300">
-                                    {blog.meta.title}
-                                </h3>
-                                <div>
-                                    <p className="text-gray-600">{blog.meta.description}</p>
-                                </div>
-                                <div className="my-auto text-gray-400">
-                                    <p>{blog.meta.date}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
-                ))}
+                <BlogPost blogs={blogs} />
             </div>
         </>
     );
