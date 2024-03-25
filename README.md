@@ -70,3 +70,17 @@ fs 모듈을 사용하여 파일 시스템에서 데이터를 읽기
 
 --dark mode -
 [darkmode nextjs](https://tailwindcss.com/docs/dark-mode)
+
+
+
+
+
+
+
+@Error
+
+npm uninstall autoprefixer postcss tailwindcss​
+
+
+tailwind공홈
+https://tailwindcss.com/docs/guides/nextjs

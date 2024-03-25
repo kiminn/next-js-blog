@@ -17,18 +17,11 @@ import Head from 'next/head';
 export default function Home() {
     return (
         <>
-            <Head>
-                <meta property="og:title" content="Maintain Hoon Blog Main" />
-                <meta property="og:type" content="website" />
-                <meta property="og:description" content="학습과 경험을 기록하고 있습니다." />
-                <meta property="og:url" content="https://maintainhoon.vercel.app" />
-                <meta property="og:image" content="https://maintainhoon.vercel.app/images/metaLogo.png" />
-            </Head>
             <section className="my-10">
                 <h1 className="font-bold text-2xl sm:text-4xl">Kimi.Log</h1>
             </section>
             <section className="flex justify-center gap-8 items-center flex-wrap">
-                <Image src="/images/profile.jpeg" alt="profile" width={300} height={300} className="rounded-2xl" />
+                <Image src="/profile.JPG" alt="profile" width={300} height={300} className="rounded-2xl" />
                 <div className="min-w-[250] max-w-[300px]">
                     <h2 className="font-bold text-xl">Developing Together!</h2>
                     <br />
