@@ -8,11 +8,10 @@ export const nav: { label: string; location: string }[] = [
 ];
 
 interface NavProps {
-    type: 'toggle' | 'normal';
     onClick?: () => void;
 }
 
-export default function Nav({ type, onClick }: NavProps) {
+export default function Nav({ onClick }: NavProps) {
     return (
         <>
             {nav.map((el) => {

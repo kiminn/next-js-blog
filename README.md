@@ -90,3 +90,5 @@ https://tailwindcss.com/docs/guides/nextjs
 content layer
 
 https://miryang.dev/blog/build-blog-with-nextjs
+
+mdx마크다운이 원하는대로 적용이 안됨

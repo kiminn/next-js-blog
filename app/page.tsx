@@ -28,8 +28,8 @@ export default function Home() {
                 <meta property="og:url" content="" />
                 <meta property="og:image" content="" />
             </Head>
-            <section className="flex justify-center gap-8 items-center flex-wrap">
-                <Image src="/prof.jpeg" alt="profile" width={300} height={300} className="rounded-2xl" />
+            <section className="flex  gap-8 items-center flex-wrap">
+                <Image src="/prof.jpeg" alt="profile" width={300} height={300} className="rounded-full justify-start" />
                 <div className="min-w-[250] max-w-[300px]">
                     <h2 className="font-bold text-xl">Developing Together!</h2>
                     <br />
@@ -40,6 +40,7 @@ export default function Home() {
                             href="mailto:808010x@gmail.com"
                             className="flex gap-2 items-center transition duration-200 ease-in-out transform hover:text-blue-300 hover:fill-blue-300"
                         >
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z" />
                             </svg>
@@ -57,15 +58,20 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <br />
+            <br />
+            <hr />
             <section className="mt-12 mb-10">
-                <h1 className="font-bold text-2xl sm:text-4xl font-mono">📝 Posts</h1>
+                <h1 className="font-bold text-2xl sm:text-4xl font-mono">Blog</h1>
             </section>
             <div className="py-2">
                 {blogs.map((blog) => (
                     <Link href={'/blogs/' + blog.slug} passHref key={blog.slug}>
                         <div className="py-2 flex justify-between align-middle gap-2">
                             <div>
-                                <h3 className="text-lg font-bold">{blog.meta.title}</h3>
+                                <h3 className="text-lg font-bold transition duration-200 ease-in-out transform hover:text-blue-300 hover:fill-blue-300">
+                                    {blog.meta.title}
+                                </h3>
                                 <div>
                                     <p className="text-gray-600">{blog.meta.description}</p>
                                 </div>
