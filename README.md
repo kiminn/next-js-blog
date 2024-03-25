@@ -84,3 +84,9 @@ npm uninstall autoprefixer postcss tailwindcss​
 
 tailwind공홈
 https://tailwindcss.com/docs/guides/nextjs
+
+
+
+content layer
+
+https://miryang.dev/blog/build-blog-with-nextjs
