@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 
 export const metadata: Metadata = {
     title: 'Kimi | FE',
@@ -17,6 +18,7 @@ export default function RootLayout({
             <body className="max-w-screen-md min-w-[320px] mx-auto text-neutral-900">
                 <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     );

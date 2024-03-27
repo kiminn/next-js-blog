@@ -1,26 +1,9 @@
 import Image from 'next/image';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 import Head from 'next/head';
 import BlogPost, { Blog } from 'components/BlogPost';
 
 export default function Home() {
-    const blogDir = 'blogs';
-
-    // 파일 시스템에서 blogs 디렉토리에 있는 파일들을 읽어와서 배열을 생성
-    const files = fs.readdirSync(path.join(blogDir));
-
-    // 생성된 파일들로부터 meta 데이터와 slug를 추출하여 배열 생성
-    const blogs = files.map((filename) => {
-        const fileContent = fs.readFileSync(path.join(blogDir, filename), 'utf-8');
-
-        const { data: frontMatter } = matter(fileContent);
-        return {
-            meta: frontMatter,
-            slug: filename.replace('.mdx', ''),
-        } as Blog;
-    });
+    
     return (
         <>
             <Head>
@@ -63,10 +46,10 @@ export default function Home() {
             <br />
             <hr />
             <section className="mt-12 mb-10">
-                <h1 className="font-bold text-2xl sm:text-3xl font-mono">Posts</h1>
+                <h1 className="font-bold text-2xl sm:text-3xl font-mono">Blog</h1>
             </section>
             <div className="py-2">
-                <BlogPost blogs={blogs} />
+                <BlogPost />
             </div>
         </>
     );
