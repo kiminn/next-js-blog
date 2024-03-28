@@ -3,11 +3,11 @@ import { styled } from '@mui/material';
 import Switch from '@mui/material/Switch';
 
 export const MUISwitch = styled(Switch)(({ theme }) => ({
-    width: 62,
+    width: 60,
     height: 34,
-    padding: 7,
+    padding: 8,
     '& .MuiSwitch-switchBase': {
-        margin: 1,
+        margin: 0,
         padding: 0,
         transform: 'translateX(6px)',
         '&.Mui-checked': {
@@ -20,12 +20,12 @@ export const MUISwitch = styled(Switch)(({ theme }) => ({
             },
             '& + .MuiSwitch-track': {
                 opacity: 1,
-                backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+                backgroundColor: theme.palette.mode === 'dark' ? '#fff2f2' : '#888d91',
             },
         },
     },
     '& .MuiSwitch-thumb': {
-        backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#001e3c',
+        backgroundColor: theme.palette.mode === 'dark' ? '#000000' : '#b0d7ff',
         width: 32,
         height: 32,
         '&::before': {
@@ -44,7 +44,7 @@ export const MUISwitch = styled(Switch)(({ theme }) => ({
     },
     '& .MuiSwitch-track': {
         opacity: 1,
-        backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+        backgroundColor: theme.palette.mode === 'dark' ? '#9da2a7' : '#aab4be',
         borderRadius: 20 / 2,
     },
 }));

@@ -31,7 +31,7 @@ export default function Page({ params }: any) {
 
     return (
         <>
-            <article className="mt-10 pb-10 border-b-2 mb-10 prose">
+            <article className="max-w-screen-md mx-auto mt-10 pb-10 border-b-2 mb-10 prose dark:prose-invert">
                 <h1>{props.fontMatter.title}</h1>
                 <MDXRemote source={props.content}></MDXRemote>
             </article>

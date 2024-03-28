@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import { ThemeProvider } from 'components/ThemeProvider';
 
 export const metadata: Metadata = {
     title: 'Kimi | FE',
@@ -14,12 +15,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className="max-w-screen-md min-w-[320px] mx-auto text-neutral-900">
-                <Header />
-                {children}
+        <html lang="ko" suppressHydrationWarning>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+                <body>
+                    <main className="flex flex-col min-h-screen text-neutral-900 dark:bg-[#111111] dark:text-white ">
+                        <Header />
+                        {children}
+                    </main>
+                </body>
                 <Footer />
-            </body>
+            </ThemeProvider>
         </html>
     );
 }
