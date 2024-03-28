@@ -12,6 +12,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.14",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@tailwindcss/typography": "^0.5.10",
     "contentlayer": "^0.3.4",
     "lucide-react": "^0.363.0",
@@ -21,7 +22,8 @@
     "react": "^18",
     "react-dom": "^18",
     "remark": "^15.0.1",
-    "remark-images": "^4.0.0"
+    "remark-images": "^4.0.0",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@types/node": "^20",

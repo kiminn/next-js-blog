@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Nav from './Nav';
 import Head from 'next/head';
 import { Cat } from 'lucide-react';
+import { MUISwitch } from './MUISwitch';
 
 export default function Header() {
     return (
@@ -15,6 +16,7 @@ export default function Header() {
                     Kimi.Log
                 </Link>
             </section>
+            <MUISwitch />
             <header className="sticky top-0 left-0 w-full z-10 h-20 font-mono transition duration-500 ">
                 <div className="justify-end gap-5 text-center hidden sm:flex pt-7  ">
                     <Nav />

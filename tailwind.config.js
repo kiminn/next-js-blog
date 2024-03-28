@@ -7,5 +7,5 @@ module.exports = {
     ],
     theme: {},
     plugins: [require('@tailwindcss/typography')],
-    darkMode: 'selector',
+    darkMode: 'class',
 };
