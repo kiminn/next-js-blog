@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Head from 'next/head';
-import BlogPost, { Blog } from 'components/BlogPost';
+import BlogPost from 'components/BlogPost';
 
 export default function Home() {
     return (
@@ -12,7 +12,7 @@ export default function Home() {
                 <meta property="og:url" content="" />
                 <meta property="og:image" content="" />
             </Head>
-            <section className="flex gap-8 items-center flex-wrap mt-10">
+            <section className="flex gap-8 items-center flex-wrap">
                 <Image src="/prof.jpeg" alt="profile" width={300} height={300} className="rounded-full justify-start" />
                 <div className="min-w-[250] max-w-[300px]">
                     <h2 className="font-bold text-xl">Developing Together!</h2>

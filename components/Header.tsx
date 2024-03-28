@@ -37,7 +37,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header ref={headerRef} className="sticky top-0 left-0 transition duration-500">
+        <header ref={headerRef} className="sticky top-0 left-0 transition duration-500 z-30 mb-8">
             <Head>
                 <title>Kimi.Log</title>
             </Head>

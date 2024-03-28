@@ -31,13 +31,13 @@ export default function Blog() {
         return dateB.getTime() - dateA.getTime(); // 내림차순으로 정렬
     });
     return (
-        <div className="max-w-screen-md mx-auto">
-            <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <div className="max-w-screen-md mx-auto z-0 mb-14">
+            <Grid>
                 {sortedBlogs?.map((blog) => (
-                    <Grid item key={blog.slug} xs={8} sm={8} md={8}>
+                    <Grid item key={blog.slug} md={8}>
                         <Link href={'/blogs/' + blog.slug} passHref key={blog.slug}>
                             <Card
-                                sx={{ maxWidth: 300, minHeight: 100 }}
+                                sx={{ width: 770, minHeight: 100 }}
                                 className="mb-8 transition duration-100 ease-in-out transform hover:text-blue-300 hover:fill-blue-300 dark:bg-[#333333] dark:text-white dark:hover:text-blue-300 dark:hover:fill-blue-300"
                             >
                                 <CardActionArea>
