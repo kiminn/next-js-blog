@@ -6,7 +6,19 @@ import { CardActionArea, Grid } from '@mui/material';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { Blog } from 'components/BlogPost';
+
+export type BlogProps = {
+    blogs: Blog[];
+};
+
+export type Blog = {
+    meta: {
+        title: string;
+        description: string;
+        date: string;
+    };
+    slug: string;
+};
 
 export default function Blog() {
     const blogDir = 'blogs';
