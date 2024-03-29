@@ -15,10 +15,10 @@ export default function Home() {
             <section className="flex gap-8 items-center flex-wrap">
                 <Image src="/prof.jpeg" alt="profile" width={300} height={300} className="rounded-full justify-start" />
                 <div className="min-w-[250] max-w-[300px]">
-                    <h2 className="font-bold text-xl">Developing Together!</h2>
+                    <h2 className="font-bold text-xl dark:text-blue-300">Developing Together!</h2>
                     <br />
-                    <p>함께 협업하는 개발자 입니다</p>
-                    <p>🩵🩵</p>
+                    <p>스터디를 진행하며 나누고 싶은 주제들을 </p>
+                    <p>공유하기 위해 만든 블로그입니다 🩵</p>
                     <div className="flex gap-5 items-center mt-4">
                         <a
                             href="mailto:808010x@gmail.com"
