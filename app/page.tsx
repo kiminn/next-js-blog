@@ -45,7 +45,7 @@ export default function Home() {
             <br />
             <hr />
             <section className="mt-12 mb-10">
-                <h1 className="font-bold text-2xl sm:text-2xl font-mono">Blog</h1>
+                <h1 className="font-bold text-2xl sm:text-2xl font-mono  text-gray-700 dark:text-white">🌿 Blog</h1>
             </section>
             <div className="py-2">
                 <BlogPost />
