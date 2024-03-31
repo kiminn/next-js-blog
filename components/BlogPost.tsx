@@ -37,7 +37,7 @@ export default function BlogPost() {
                 <Grid item key={blog.slug} xs={8} sm={6} md={4}>
                     <Link href={'/blogs/' + blog.slug} passHref key={blog.slug}>
                         <Card
-                            sx={{ maxWidth: 300, minHeight: 100 }}
+                            sx={{ maxWidth: 300, height: 150 }}
                             className="mb-8 transition duration-100 ease-in-out transform text-gray-700 hover:text-blue-300 hover:fill-blue-500 dark:bg-[#333333] dark:text-white dark:hover:text-blue-300 dark:hover:fill-blue-300"
                         >
                             <CardActionArea>
@@ -54,7 +54,7 @@ export default function BlogPost() {
                                         variant="body2"
                                         color="text.secondary"
                                         fontSize={16}
-                                        className="text-md transition dark:text-gray-400 mt-1"
+                                        className="text-md transition dark:text-gray-400 mt-1 "
                                     >
                                         {blog.meta.description}
                                     </Typography>
