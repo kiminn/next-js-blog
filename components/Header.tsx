@@ -43,8 +43,8 @@ export default function Header() {
             </Head>
             <div className="max-w-screen-md min-w-[320px] mx-auto container flex justify-between  bg-white dark:bg-[#111111]">
                 <section className="my-7">
-                    <Link href="/" className="flex font-medium text-2xl sm:text-4xl cursor-pointer items-center">
-                        <Cat size={40} className="items-center pt-1" />
+                    <Link href="/" className="flex font-medium text-lg sm:text-2xl cursor-pointer items-center">
+                        <Cat size={34} className="items-center pt-1 pr-1" />
                         Kimi.Log
                     </Link>
                 </section>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Grid } from '@mui/material';
+import { CardActionArea, Grid, Paper } from '@mui/material';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -48,38 +48,40 @@ export default function Blog() {
                 {sortedBlogs?.map((blog) => (
                     <Grid item key={blog.slug} md={8}>
                         <Link href={'/blogs/' + blog.slug} passHref key={blog.slug}>
-                            <Card
-                                sx={{ width: 770, minHeight: 100 }}
-                                className="mb-8 transition duration-100 ease-in-out transform hover:text-blue-300 hover:fill-blue-300 dark:bg-[#333333] dark:text-white dark:hover:text-blue-300 dark:hover:fill-blue-300"
-                            >
-                                <CardActionArea>
-                                    <CardContent>
-                                        <Typography
-                                            gutterBottom
-                                            variant="h5"
-                                            component="div"
-                                            className="font-extrabold sm:text-2xl mt-2 transition"
-                                        >
-                                            {blog.meta.title}
-                                        </Typography>
-                                        <Typography
-                                            variant="body2"
-                                            color="text.secondary"
-                                            fontSize={16}
-                                            className="text-lg transition dark:text-gray-400 mt-1"
-                                        >
-                                            {blog.meta.description}
-                                        </Typography>
-                                        <Typography
-                                            variant="body2"
-                                            color="text.secondary"
-                                            className="transition dark:text-gray-300"
-                                        >
-                                            {blog.meta.date}
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
+                            <Paper elevation={0} square={false}>
+                                <Card
+                                    sx={{ width: 770, minHeight: 100 }}
+                                    className="mb-8 transition duration-100 ease-in-out transform hover:text-blue-300 hover:fill-blue-500 dark:bg-[#333333] dark:text-white dark:hover:text-blue-300 dark:hover:fill-blue-300"
+                                >
+                                    <CardActionArea>
+                                        <CardContent>
+                                            <Typography
+                                                gutterBottom
+                                                variant="h5"
+                                                component="div"
+                                                className="font-bold sm:text-xl mt-2 transition"
+                                            >
+                                                {blog.meta.title}
+                                            </Typography>
+                                            <Typography
+                                                variant="body2"
+                                                color="text.secondary"
+                                                fontSize={16}
+                                                className="text-md transition dark:text-gray-400 mt-1"
+                                            >
+                                                {blog.meta.description}
+                                            </Typography>
+                                            <Typography
+                                                variant="body2"
+                                                color="text.secondary"
+                                                className="transition dark:text-gray-300"
+                                            >
+                                                {blog.meta.date}
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                </Card>
+                            </Paper>
                         </Link>
                     </Grid>
                 ))}
