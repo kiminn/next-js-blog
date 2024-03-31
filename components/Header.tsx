@@ -37,14 +37,17 @@ export default function Header() {
     }, []);
 
     return (
-        <header ref={headerRef} className="sticky top-0 left-0 transition duration-500 z-30 mb-8">
+        <header ref={headerRef} className="sticky top-0 left-0 transition duration-400 z-30 mb-8">
             <Head>
                 <title>Kimi.Log</title>
             </Head>
             <div className="max-w-screen-md min-w-[320px] mx-auto container flex justify-between  bg-white dark:bg-[#111111]">
                 <section className="my-7">
-                    <Link href="/" className="flex font-medium text-lg sm:text-2xl cursor-pointer items-center">
-                        <Cat size={34} className="items-center pt-1 pr-1" />
+                    <Link
+                        href="/"
+                        className="flex font-medium text-lg sm:text-2xl cursor-pointer items-center transition ease-in-out hover:text-blue-300"
+                    >
+                        <Cat size={34} className="items-center pt-1 pr-1 " />
                         Kimi.Log
                     </Link>
                 </section>

@@ -38,7 +38,7 @@ export default function BlogPost() {
                     <Link href={'/blogs/' + blog.slug} passHref key={blog.slug}>
                         <Card
                             sx={{ maxWidth: 300, minHeight: 100 }}
-                            className="mb-8 transition duration-100 ease-in-out transform hover:text-blue-300 hover:fill-blue-500 dark:bg-[#333333] dark:text-white dark:hover:text-blue-300 dark:hover:fill-blue-300"
+                            className="mb-8 transition duration-100 ease-in-out transform text-gray-700 hover:text-blue-300 hover:fill-blue-500 dark:bg-[#333333] dark:text-white dark:hover:text-blue-300 dark:hover:fill-blue-300"
                         >
                             <CardActionArea>
                                 <CardContent>
@@ -46,7 +46,7 @@ export default function BlogPost() {
                                         gutterBottom
                                         variant="h6"
                                         component="div"
-                                        className="font-bold sm:text-xl mt-2 transition text-gray-700 dark:text-white"
+                                        className="font-semibold sm:text-xl mt-2 transition"
                                     >
                                         {blog.meta.title}
                                     </Typography>
