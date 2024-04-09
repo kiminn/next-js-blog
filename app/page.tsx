@@ -1,17 +1,38 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import BlogPost from 'components/BlogPost';
+import { FC } from 'react';
+
+// Meta 컴포넌트의 프로퍼티 타입 정의
+interface Props {
+    title: string;
+    type: string;
+    description: string;
+    url: string;
+    image: string;
+}
+
+// Meta 컴포넌트 정의
+const Meta: FC<Props> = ({ title, type, description, url, image }) => (
+    <Head>
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content={type} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={image} />
+    </Head>
+);
 
 export default function Home() {
     return (
         <div className="max-w-screen-md min-w-[320px] mx-auto ">
-            <Head>
-                <meta property="og:title" content="Kimi's Blog" />
-                <meta property="og:type" content="website" />
-                <meta property="og:description" content="함께 성장하는 개발자 입니다." />
-                <meta property="og:url" content="" />
-                <meta property="og:image" content="" />
-            </Head>
+            <Meta
+                title="Kimi's Blog"
+                type="website"
+                description="함께 성장하는 개발자 입니다."
+                url="https://next-js-blog-three.vercel.app/"
+                image=""
+            />
             <section className="flex gap-8 items-center flex-wrap">
                 <Image src="/prof.jpeg" alt="profile" width={300} height={300} className="rounded-full justify-start" />
                 <div className="min-w-[250] max-w-[300px]">

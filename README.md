@@ -34,8 +34,8 @@ title: 'My First Post'
 date: '2024-03-22'
 author: 'John Doe'
 tags:
-  - Next.js
-  - Blogging
+    - Next.js
+    - Blogging
 ```
 
 ## ⚫️ 폴더 어떻게 불러올까 ?
@@ -67,25 +67,15 @@ fs 모듈을 사용하여 파일 시스템에서 데이터를 읽기
 
 이를 위해 React 컴포넌트를 활용하여 각 포스트의 메타데이터와 내용을 표시할 수 있다
 
-
 --dark mode -
 [darkmode nextjs](https://tailwindcss.com/docs/dark-mode)
-
-
-
-
-
-
 
 @Error
 
 npm uninstall autoprefixer postcss tailwindcss​
 
-
 tailwind공홈
 https://tailwindcss.com/docs/guides/nextjs
-
-
 
 content layer
 
@@ -112,5 +102,8 @@ module.exports = {
     },
     plugins: [require('@tailwindcss/typography')],
 };
-
 ```
+
+## generate metadata
+
+"generate metadata"란, 웹 페이지나 애플리케이션의 정보를 요약하는 데이터를 생성하는 과정을 의미합니다. 메타데이터는 해당 웹 페이지의 제목, 설명, 키워드, 저자 등의 정보를 포함할 수 있으며, 검색 엔진 최적화(SEO)에 중요한 역할을 합니다. 이 정보는 `<meta>` 태그를 사용하여 HTML 문서의 `<head>` 섹션 안에 포함됩니다. 웹 페이지가 검색 엔진에 의해 색인될 때, 메타데이터는 검색 결과에 표시되는 정보를 결정하는 데 도움을 줍니다. 메타데이터를 적절히 생성하고 관리하는 것은 사용자가 콘텐츠를 쉽게 찾을 수 있도록 하고, 웹 사이트의 가시성을 높이는 데 중요합니다.
